@@ -1,173 +1,212 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 
-import Hero from '~/components/widgets/Hero.astro';
-import Note from '~/components/widgets/Note.astro';
-import Features from '~/components/widgets/Features.astro';
-import Features2 from '~/components/widgets/Features2.astro';
-import Steps from '~/components/widgets/Steps.astro';
-import Content from '~/components/widgets/Content.astro';
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
-import Stats from '~/components/widgets/Stats.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+// import Features3 from '~/components/widgets/Features3.astro';
+import Content from '~/components/widgets/Content.astro';
+// import Testimonials from '~/components/widgets/Testimonials.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+// import Steps2 from '~/components/widgets/Steps2.astro';
+import Steps from '~/components/widgets/Steps.astro';
+// import Stats from '~/components/widgets/Stats.astro';
 
 const metadata = {
-  title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
-  ignoreTitleTemplate: true,
+  title: 'Mobile App Homepage',
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
+  <!-- Hero2 Widget ******************* -->
 
-  <Hero
-    callToAction={{ text: 'Get template', href: 'https://github.com/onwidget/astrowind', icon: 'tabler:download' }}
-    callToAction2={{ text: 'Learn more', href: '#features' }}
-    image={{ src: '~/assets/images/hero.png', alt: 'AstroWind Hero Image' }}
+  <Hero2
+    callToAction={{
+      text: "Utiliser l'application",
+      href: 'https://app.listnbuddy.com',
+      icon: 'tabler:download',
+    }}
+    callToAction2={{ text: 'En savoir plus', href: '#features' }}
+    image={{
+      src: 'src/assets/images/screenshot.png',
+      alt: 'AstroWind Hero Image',
+    }}
   >
-    <Fragment slot="title">
-      Free template for <span class="hidden xl:inline">creating websites with</span>
-      <span class="text-accent dark:text-white highlight"> Astro 2.0</span> + Tailwind CSS
-    </Fragment>
+    <Fragment slot="title">ListnBuddy - Partagez vos listes de courses avec vos proches</Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        <span class="font-semibold">AstroWind</span> is a free, customizable and production-ready template for Astro 2.0
-        + Tailwind CSS.</span
-      >
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">AstroWind: Production-ready.</span>
-       Suitable for Startups, Small Business, SaaS websites, Professional Portfolios, Marketing websites, Landing Pages
-      & Blogs.
+        Simplifiez vos courses avec ListnBuddy, l'application qui vous permet de créer, partager et collaborer sur des
+        listes de courses. Idéal pour les courses en famille, les fêtes entres amis, une liste pour un repas spécial et
+        bien plus encore.
+      </span>
     </Fragment>
-  </Hero>
+  </Hero2>
 
-  <!-- Note Widget ******************* -->
+  <!-- Features3 Widget ************** -->
 
-  <Note />
-
-  <!-- Features Widget *************** -->
-
-  <Features
-    id="features"
-    tagline="Features"
-    title="What you get with AstroWind"
-    subtitle="One of the most professional and comprehensive templates currently on the market. Most starred & forked Astro theme in 2022."
+  <!-- <Features3
+    title="Comment utiliser notre application ?"
+    subtitle="Dites adieu aux heures passées à créer des listes de courses manuellement. Notre application offre une solution innovante. Avec une interface conviviale, créez désormais des listes de courses impressionnantes en quelques minutes. Découvrez nos fonctionnalités dès maintenant et constatez la différence."
+    tagline="Guide étape par étape"
+    columns={2}
     items={[
       {
-        title: 'Astro + Tailwind CSS Integration',
+        title: "Utilisez et Installez l'Application",
         description:
-          'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
-        icon: 'tabler:brand-tailwind',
+          'Utilisez directement sur internet ou installez facilement ListnBuddy sur votre appareil. Suivez nos instructions pour une configuration sans tracas.',
+        icon: 'tabler:square-number-1',
       },
       {
-        title: 'Ready-to-use Components',
+        title: 'Inscrivez-vous',
         description:
-          'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
-        icon: 'tabler:components',
+          'Créez votre compte ListnBuddy en quelques étapes simples. Une fois inscrit, vous aurez accès à toutes les fonctionnalités.',
+        icon: 'tabler:square-number-2',
       },
       {
-        title: 'Best Practices',
+        title: 'Créez Vos Listes',
         description:
-          'Creating secure, efficient, and user-friendly websites that deliver exceptional experiences and lasting value.',
-        icon: 'tabler:list-check',
+          'Commencez à créer vos listes de courses personnalisées. Ajoutez des articles, définissez des priorités et préparez-vous à magasiner !',
+        icon: 'tabler:square-number-3',
       },
       {
-        title: 'Excellent Page Speed',
+        title: 'Partagez avec Vos Proches',
         description:
-          'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
-        icon: 'tabler:rocket',
-      },
-      {
-        title: 'Search Engine Optimization (SEO)',
-        description:
-          "SEO lies in its ability to enhance a website's visibility, driving organic traffic and enabling it to reach a wider audience.",
-        icon: 'tabler:arrows-right-left',
-      },
-      {
-        title: 'Open to new ideas and contributions',
-        description:
-          'Embracing a culture that is open to new ideas and contributions is integral fostering innovation, collaboration, and a dynamic user experience.',
-        icon: 'tabler:bulb',
+          'Invitez vos amis et votre famille à rejoindre vos listes de courses. Collaborez en temps réel et assurez-vous de ne rien oublier.',
+        icon: 'tabler:square-number-4',
       },
     ]}
+    image={{
+      src: 'https://images.pexels.com/photos/3985056/pexels-photo-3985056.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      alt: 'Colorful Image',
+    }}
+  /> -->
+  <Steps
+    isReversed
+    title="Comment utiliser notre application ?"
+    subtitle="Dites adieu aux heures passées à créer des listes de courses manuellement. Notre application offre une solution innovante. Avec une interface conviviale, créez désormais des listes de courses impressionnantes en quelques minutes. Découvrez nos fonctionnalités dès maintenant et constatez la différence."
+    tagline="Guide étape par étape"
+    columns={2}
+    items={[
+      {
+        title: "Utilisez et Installez l'Application",
+        description:
+          'Utilisez directement sur internet ou installez facilement ListnBuddy sur votre appareil. Suivez nos instructions pour une configuration sans tracas.',
+        icon: 'tabler:download',
+      },
+      {
+        title: 'Inscrivez-vous',
+        description:
+          'Créez votre compte ListnBuddy en quelques étapes simples. Une fois inscrit, vous aurez accès à toutes les fonctionnalités.',
+        icon: 'tabler:user-plus',
+      },
+      {
+        title: 'Créez Vos Listes',
+        description:
+          'Commencez à créer vos listes de courses personnalisées. Ajoutez des articles, définissez des priorités et préparez-vous à magasiner !',
+        icon: 'tabler:list-details',
+      },
+      {
+        title: 'Partagez avec Vos Proches',
+        description:
+          'Invitez vos amis et votre famille à rejoindre vos listes de courses. Collaborez en temps réel et assurez-vous de ne rien oublier.',
+        icon: 'tabler:share',
+      },
+    ]}
+    image={{
+      src: 'https://images.pexels.com/photos/3985056/pexels-photo-3985056.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      alt: 'Colorful Image',
+    }}
   />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    callToAction={{
+      text: 'Créer un compte',
+      href: 'https://app.listnbuddy.com',
+      icon: 'tabler:download',
+    }}
+  >
+    <Fragment slot="title">'Inscrivez-vous',</Fragment>
+
+    <Fragment slot="subtitle">
+      Inscrivez-vous dès maintenant pour profiter gratuitement de ListnBuddy. <br class="hidden md:inline" />Optimisez
+      chaque sortie shopping avec facilité ! 😊
+    </Fragment>
+  </CallToAction>
 
   <!-- Content Widget **************** -->
 
   <Content
-    isReversed
-    tagline="Inside template"
-    title="AstroWind's Blueprint: Fun Meets Functionality!"
+    id="features"
     items={[
       {
-        title: 'Per ei quaeque sensibus',
+        title: 'Partage de Listes Collaboratif',
         description:
-          'Ex usu illum iudico molestie. Pro ne agam facete mediocritatem, ridens labore facete mea ei. Pro id apeirian dignissim.',
+          'Créez des listes de courses et invitez des personnes à les rejoindre, permettant à tous les participants de voir et de mettre à jour les articles en temps réel.',
+        icon: 'tabler:affiliate',
       },
       {
-        title: 'Cu imperdiet posidonium sed',
+        title: "Ajout d'Articles Facile",
         description:
-          'Amet utinam aliquando ut mea, malis admodum ocurreret nec et, elit tibique cu nec. Nec ex maluisset inciderint, ex quis.',
+          " Ajoutez rapidement des articles à acheter à vos listes de courses à l'aide d'une interface conviviale.",
+        icon: 'tabler:calendar-plus',
       },
       {
-        title: 'Nulla omittam sadipscing mel ne',
+        title: 'Marquage des Articles Achetés',
+        description: 'Cochez les articles que vous avez achetés pour une gestion efficace des achats.',
+        icon: 'tabler:checkbox',
+      },
+      {
+        title: 'Marquage des Quantités',
+        description: 'Indiquez les quantités nécessaires pour chaque article, garantissant un achat précis.',
+        icon: 'tabler:abacus',
+      },
+      {
+        title: 'Accès Hors Ligne ',
         description:
-          'At sed possim oporteat probatus, justo graece ne nec, minim commodo legimus ut vix. Ut eos iudico quando soleat, nam modus.',
+          'Consultez vos listes de courses même lorsque vous êtes hors ligne, ce qui en fait un compagnon idéal pour les courses.',
+        icon: 'tabler:wifi-off',
+      },
+      {
+        title: 'Listes Partagées',
+        description:
+          'Créez et gérez plusieurs listes de courses pour différentes occasions et partagez-les avec des groupes spécifiques.',
+        icon: 'tabler:share-2',
+      },
+      {
+        title: 'Partage Sécurisé',
+        description: 'Partagez vos listes en toute sécurité avec des invitations contrôlées.',
+        icon: 'tabler:spy',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      src: 'https://images.unsplash.com/photo-1572721968930-b96258f64801?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80',
       alt: 'Colorful Image',
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Ad vix debet docendi</h3>
-       Ne dicta praesent ocurreret has, diam theophrastus at pro. Eos etiam regione ut, persius eripuit quo id. Sit te
-      euismod tacimates.
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Principales Fonctionnalités</h3>
     </Fragment>
   </Content>
 
-  <!-- Content Widget **************** -->
+  <!-- CallToAction Widget *********** -->
 
-  <Content
-    isAfterContent
-    items={[
-      {
-        title: 'Per ei quaeque sensibus',
-        description:
-          'Ex usu illum iudico molestie. Pro ne agam facete mediocritatem, ridens labore facete mea ei. Pro id apeirian dignissim.',
-      },
-      {
-        title: 'Cu imperdiet posidonium sed',
-        description:
-          'Amet utinam aliquando ut mea, malis admodum ocurreret nec et, elit tibique cu nec. Nec ex maluisset inciderint, ex quis.',
-      },
-      {
-        title: 'Nulla omittam sadipscing mel ne',
-        description:
-          'At sed possim oporteat probatus, justo graece ne nec, minim commodo legimus ut vix. Ut eos iudico quando soleat, nam modus.',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80',
-      alt: 'Blueprint Image',
+  <CallToAction
+    callToAction={{
+      text: 'Découvrir plus',
+      href: 'https://app.listnbuddy.com',
+      icon: 'tabler:download',
     }}
   >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Ad vix debet docendi</h3>
-       Ne dicta praesent ocurreret has, diam theophrastus at pro. Eos etiam regione ut, persius eripuit quo id. Sit te
-      euismod tacimates.
-    </Fragment>
+    <Fragment slot="title">Explorez nos fonctionnalités,</Fragment>
 
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    <Fragment slot="subtitle">
+      Découvrez comment ListnBuddy révolutionne la gestion de vos listes de courses. <br
+        class="hidden md:inline"
+      />Optimisez vos courses dès aujourd'hui ! 😊
     </Fragment>
-  </Content>
+  </CallToAction>
 
   <!-- Content Widget **************** -->
 
@@ -176,194 +215,161 @@ const metadata = {
     isAfterContent
     items={[
       {
-        title: 'Per ei quaeque sensibus',
+        title: 'Gain de Temps',
+        description:
+          'Économisez du temps en évitant les allers-retours pour vérifier les articles manquants et en permettant à tous les participants de contribuer à la liste.',
+        icon: 'tabler:clock',
       },
       {
-        title: 'Cu imperdiet posidonium sed',
+        title: 'Organisation Familiale',
+        description:
+          'Facilitez la coordination des courses en famille en partageant des listes et en garantissant que tout le monde soit sur la même page.',
+        icon: 'tabler:mood-plus',
       },
       {
-        title: 'Nulla omittam sadipscing mel ne',
+        title: 'Moins de Gaspillage',
+        description:
+          "Achetez uniquement ce dont vous avez besoin en évitant d'acheter en double et en gardant une trace claire des articles nécessaires.",
+        icon: 'tabler:coin-euro',
       },
       {
-        title: 'Per ei quaeque sensibus',
+        title: 'Collaboration Pratique',
+        description:
+          'Planifiez des événements et des projets culinaires en équipe tout en ayant la possibilité de mettre à jour les listes en temps réel.',
+        icon: 'tabler:social',
       },
       {
-        title: 'Cu imperdiet posidonium sed',
+        title: 'Accessibilité ',
+        description:
+          "Accédez à vos listes de courses depuis n'importe quel appareil avec une connexion internet, que ce soit un téléphone, une tablette ou un ordinateur.",
+        icon: 'tabler:device-mobile-check',
       },
       {
-        title: 'Nulla omittam sadipscing mel ne',
+        title: 'Interface Conviviale',
+        description:
+          "Profitez d'une interface intuitive et simple à utiliser, même pour ceux qui ne sont pas à l'aise avec la technologie.",
+        icon: 'tabler:pencil-plus',
+      },
+      {
+        title: 'Gestion Efficace',
+        description:
+          'Suivez facilement les articles que vous avez achetés et ceux qui restent à acheter, évitant ainsi les oublis.',
+        icon: 'tabler:list-details',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1611462985358-60d3498e0364?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Astronauts Image',
+      src: 'https://images.unsplash.com/photo-1643443578657-6170bfbb1920?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80',
+      alt: 'Vintage Image',
     }}
   >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Les bénéfices</h3>
     </Fragment>
   </Content>
 
-  <!-- Steps Widget ****************** -->
+  <!-- CallToAction Widget *********** -->
 
-  <Steps
-    title="Get your dream website up and running in no time with AstroWind."
-    items={[
-      {
-        title: 'Step 1: <span class="font-medium">Download</span>',
-        description:
-          'Kickstart with GitHub! Either fork the AstroWind template or simply click \'Use this template\'. Your canvas awaits, ready for your digital masterpiece. In just a few clicks, you\'ve already set the foundation.',
-        icon: 'tabler:package',
-      },
-      {
-        title: 'Step 2: <span class="font-medium">Add content</em>',
-        description:
-          'Pour your vision into it. Add images, text, and all that jazz to breathe life into your digital space. Remember, it\'s the content that tells your story, so make it captivating.',
-        icon: 'tabler:letter-case',
-      },
-      {
-        title: 'Step 3: <span class="font-medium">Customize styles</span>',
-        description:
-          'Give it your personal touch. Tailor colors, fonts, and layouts until it feels just right. Your unique flair, amplified by AstroWind! Precision in design ensures a seamless user experience.',
-        icon: 'tabler:paint',
-      },
-      {
-        title: 'Ready!',
-        icon: 'tabler:check',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'Steps image',
+  <CallToAction
+    callToAction={{
+      text: 'Explorez nos avantages',
+      href: 'https://app.listnbuddy.com',
+      icon: 'tabler:download',
     }}
-  />
+  >
+    <Fragment slot="title">Explorez nos fonctionnalités,</Fragment>
 
-  <!-- Features2 Widget ************** -->
+    <Fragment slot="subtitle">
+      Découvrez comment ListnBuddy simplifie vos courses et optimise votre organisation. <br
+        class="hidden md:inline"
+      />Découvrez une nouvelle manière de gérer vos listes dès maintenant ! 😊
+    </Fragment>
+  </CallToAction>
 
-  <Features2
-    title="Most used widgets"
-    subtitle="Provides frequently used components for building websites using Tailwind CSS"
-    tagline="Components"
-    items={[
+  <!-- Stats Widget ****************** -->
+
+  <!-- <Stats
+    title="Statistics of our app"
+    stats={[
+      { amount: '20K', icon: 'tabler:download' },
+      { amount: '18.5K', icon: 'tabler:users' },
+      { amount: '4.7', icon: 'tabler:user-star' },
+    ]}
+  /> -->
+
+  <!-- Testimonials Widget *********** -->
+
+  <!-- <Testimonials
+    title="What our users say?"
+    testimonials={[
       {
-        title: 'Headers',
-        description:
-          'Ever tried driving without GPS? Boom! That\'s why websites need headers for direction.',
-        icon: 'flat-color-icons:template',
+        testimonial:
+          'Vestibulum auctor dui vel nunc rutrum, quis elementum dui tristique. Sed hendrerit at lacus eget consectetur. In elementum scelerisque scelerisque. Nulla vel venenatis velit.',
+        name: 'Cary Kennedy',
+        job: 'Film director',
+        image: {
+          src: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+          alt: 'Cary Kennedy Image',
+        },
       },
       {
-        title: 'Heros',
-        description:
-          'Picture a superhero landing – epic, right? That\'s the job of a Hero section, making grand entrances!',
-        icon: 'flat-color-icons:gallery',
+        testimonial:
+          'Mauris condimentum at tellus eget lacinia. Integer at ipsum eget urna rhoncus tincidunt. Curabitur condimentum scelerisque lobortis. Cras semper purus egestas sem blandit, in volutpat nibh rutrum.',
+        name: 'Josh Wilkinson',
+        job: 'Product Manager',
+        image: {
+          src: 'https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+          alt: 'Josh Wilkinson Image',
+        },
       },
       {
-        title: 'Features',
-        description:
-          'Where websites strut their stuff and show off superpowers. No holding back on the bragging rights here!',
-        icon: 'flat-color-icons:approval',
-      },
-      {
-        title: 'Content',
-        description:
-          'Dive into the meat and potatoes of a site; without it, you\'d just be window shopping. Content is king.',
-        icon: 'flat-color-icons:document',
-      },
-      {
-        title: 'Call-to-Action',
-        description:
-          'That enthusiastic friend who\'s always urging, "Do it! Do it!"? Yeah, that\'s this button nudging you towards adventure.',
-        icon: 'flat-color-icons:advertising',
-      },
-      {
-        title: 'Pricing',
-        description:
-          'Behold the dessert menu of the website world. Tempting choices await, can you resist?',
-        icon: 'flat-color-icons:currency-exchange',
-      },
-      {
-        title: 'Testimonial',
-        description:
-          'Step into the gossip corner! Here, other visitors spill the beans and share the juicy details.',
-        icon: 'flat-color-icons:voice-presentation',
-      },
-      {
-        title: 'Contact',
-        description:
-          'Like a digital mailbox, but faster! Drop a line, ask a question, or send a virtual high-five. Ding! Message in.',
-        icon: 'flat-color-icons:business-contact',
-      },
-      {
-        title: 'Footers',
-        description:
-          'The footer\'s like the credits of a movie but sprinkled with easter eggs. Time to hunt!',
-        icon: 'flat-color-icons:database',
+        testimonial:
+          'Praesent laoreet metus ac vehicula venenatis. Vivamus ullamcorper enim neque, sit amet eleifend sapien volutpat a. Proin quis varius metus. Etiam ut neque ipsum.',
+        name: 'Sidney Hansen',
+        job: 'Decorator',
+        image: {
+          src: 'https://images.unsplash.com/photo-1512361436605-a484bdb34b5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+          alt: 'Sidney Hansen Image',
+        },
       },
     ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Features2>
-
-  <!-- HighlightedPosts Widget ******* -->
-
-  <BlogLatestPosts
-    title="Find out more content in our Blog"
-    information={`The blog is used to display AstroWind documentation.
-                        Each new article will be an important step that you will need to know to be an expert in creating a website using Astro + Tailwind CSS.
-                        Astro is a very interesting technology. Thanks.
-                `}
-  />
+    callToAction={{
+      targetBlank: true,
+      text: 'Read more testimonials',
+      href: 'https://github.com/onwidget/astrowind',
+      icon: 'tabler:chevron-right',
+    }}
+  /> -->
 
   <!-- FAQs Widget ******************* -->
 
   <FAQs
-    title="Frequently Asked Questions"
-    subtitle="Duis turpis dui, fringilla mattis sem nec, fringilla euismod neque. Morbi tincidunt lacus nec tortor scelerisque pulvinar."
-    tagline="FAQs"
+    title="Des questions en suspens ?"
     items={[
       {
-        title: "Why AstroWind?",
+        title: 'Que fait cette application ?',
         description:
-          "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
+          'ListnBuddy simplifie la gestion des courses en permettant de créer et partager des listes de courses avec vos proches.',
       },
       {
-        title: 'What do I need to start?',
+        title: 'Comment cette application résout-elle mon problème ?',
         description:
-          'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
+          'ListnBuddy offre des fonctionnalités intuitives pour créer, personnaliser et partager des listes de courses en temps réel.',
       },
       {
-        title: 'How to install the Astro + Tailwind CSS template?',
+        title: 'Est-elle disponible sur mon appareil ?',
         description:
-          "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
+          "ListnBuddy est une application web PWA, ce qui signifie qu'elle fonctionne sur la plupart des navigateurs et des appareils.",
       },
       {
-        title: "What's something that you don't understand?",
+        title: 'Quelle est la particularité de cette application par rapport aux autres ?',
         description:
-          "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
+          "ListnBuddy se distingue par sa simplicité d'utilisation, ses fonctionnalités collaboratives et son design convivial.",
       },
       {
-        title: 'What is something that you would like to try again?',
+        title: "Y a-t-il des coûts associés à l'utilisation de ListnBuddy ?",
         description:
-          "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
+          "ListnBuddy propose est gratuit. Nous ne prévoyons pas de passer à un modèle payant, mais nous pouvons ajouter des fonctionnalités premium à l'avenir.",
       },
-      {
-        title: 'If you could only ask one question to each person you meet, what would that question be?',
-        description:
-          "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
-      },
-    ]}
-  />
-
-  <!-- Stats Widget ****************** -->
-
-  <Stats
-    stats={[
-      { title: 'Downloads', amount: '132K' },
-      { title: 'Stars', amount: '24.8K' },
-      { title: 'Forks', amount: '10.3K' },
-      { title: 'Users', amount: '48.4K' },
     ]}
   />
 
@@ -371,18 +377,15 @@ const metadata = {
 
   <CallToAction
     callToAction={{
-      text: 'Get template',
-      href: 'https://github.com/onwidget/astrowind',
+      text: "Accéder à l'app",
+      href: 'https://app.listnbuddy.com',
       icon: 'tabler:download',
     }}
   >
-    <Fragment slot="title">
-      Astro + <br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
-    </Fragment>
+    <Fragment slot="title">Commencez dès maintenant</Fragment>
 
     <Fragment slot="subtitle">
-      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
-      waste more time! :P
+      Découvrez des résultats qui dépassent vos attentes. <br class="hidden md:inline" />Profitez de chaque instant ! 😊
     </Fragment>
   </CallToAction>
 </Layout>
