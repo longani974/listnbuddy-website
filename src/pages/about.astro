@@ -1,8 +1,10 @@
 ---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import Hero from '~/components/widgets/Hero.astro';
-import Stats from '~/components/widgets/Stats.astro';
+// import Stats from '~/components/widgets/Stats.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
@@ -14,105 +16,88 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
-  <Hero image={{ src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80', alt: 'Caos Image' }}>
+  <Hero
+    image={{
+      src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Caos Image',
+    }}
+  >
     <Fragment slot="title">
-      Elevate your online presence with our <br />
-      <span class="text-accent dark:text-white highlight"> Beautiful Website Templates</span>
+      Apprenez en un peu plus sur <br />
+      <span class="text-accent dark:text-white highlight"> l'équipe de ListnBuddy</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      Donec efficitur, ipsum quis congue luctus, mauris magna convallis mauris, eu auctor nisi lectus non augue. Donec
-      quis lorem non massa vulputate efficitur ac at turpis. Sed tincidunt ex a nunc convallis, et lobortis nisi tempus.
-      Suspendisse vitae nisi eget tortor luctus maximus sed non lectus.
+      Bienvenue chez ListnBuddy ! Nous sommes ravis de vous présenter notre application conçue pour simplifier et
+      améliorer vos expériences de shopping en famille, entre amis et même au travail.
     </Fragment>
   </Hero>
 
-  <!-- Stats Widget ****************** -->
+  <!-- Features2 Widget ************** -->
 
-  <Stats
-    title="Statistics about us"
-    stats={[
-      { title: 'Offices', amount: '4' },
-      { title: 'Employees', amount: '248' },
-      { title: 'Templates', amount: '12' },
-      { title: 'Awards', amount: '24' },
-    ]}
-  />
-
-  <!-- Features3 Widget ************** -->
-
-  <Features3
-    title="Our templates"
-    subtitle="Etiam scelerisque, enim eget vestibulum luctus, nibh mauris blandit nulla, nec vestibulum risus justo ut enim. Praesent lacinia diam et ante imperdiet euismod."
-    columns={3}
-    isBeforeContent={true}
+  <Features2
+    title="Notre Histoire"
+    subtitle="ListnBuddy est une application de liste de courses collaborative, conçue pour simplifier et améliorer vos expériences de shopping en famille, entre amis et même au travail."
+    columns={2}
     items={[
       {
-        title: 'Educational',
+        title: 'Le Déclencheur',
         description:
-          'Morbi faucibus luctus quam, sit amet aliquet felis tempor id. Cras augue massa, ornare quis dignissim a, molestie vel nulla.',
-        icon: 'tabler:template',
+          "Tout a commencé avec un besoin personnel. En tant que créateur de ListnBuddy, j'ai conçu cette application pour ma femme et moi, dans l'objectif de mieux nous organiser lors de nos courses.",
+        icon: 'tabler:messages',
       },
       {
-        title: 'Interior Design',
+        title: "L'Observation",
         description:
-          'Vivamus porttitor, tortor convallis aliquam pretium, turpis enim consectetur elit, vitae egestas purus erat ac nunc nulla.',
-        icon: 'tabler:template',
+          'À maintes reprises, nous avons constaté que les courses pouvaient être stressantes et nécessitaient beaucoup de coordination.',
+        icon: 'tabler:headset',
       },
       {
-        title: 'Photography',
+        title: 'Le Besoin Identifié',
         description:
-          'Duis sed lectus in nisl vehicula porttitor eget quis odio. Aliquam erat volutpat. Nulla eleifend nulla id sem fermentum.',
-        icon: 'tabler:template',
+          "Quand j'avais besoin de quelque chose, ou lorsque nos enfants réclamaient des articles spécifiques, ma femme devait souvent s'arrêter au supermarché en rentrant du travail.",
+        icon: 'tabler:headset',
+      },
+      {
+        title: "L'Idée Émerge",
+        description:
+          "C'est ainsi qu'est née l'idée de créer une application qui nous permettrait de suivre les articles nécessaires et manquants en temps réel, où que nous soyons.",
+        icon: 'tabler:headset',
       },
     ]}
   />
 
   <!-- Features3 Widget ************** -->
 
-  <Features3
-    columns={3}
+  <Content
+    columns={1}
     isAfterContent={true}
+    title="Notre Engagement"
+    subtitle="Nous sommes engagés à simplifier vos courses et à améliorer votre expérience d'achat."
+    imgHeight="500"
     items={[
       {
-        title: 'E-commerce',
+        title: "De l'Individuel au Collectif",
         description:
-          'Rutrum non odio at vehicula. Proin ipsum justo, dignissim in vehicula sit amet, dignissim id quam. Sed ac tincidunt sapien.',
-        icon: 'tabler:template',
+          "Ce qui devait être une simple application pour notre usage personnel a rapidement évolué en un projet sérieux. Nous avons réalisé que ListnBuddy pouvait également aider d'autres familles à mieux s'organiser et à simplifier leurs courses.",
+        // icon: 'tabler:template',
+      },
+
+      {
+        title: 'Compétences Mises en Œuvre',
+        description:
+          "En tant qu'autodidacte en code et développement web, avec des expériences en tant que freelance et quelques projets parallèles, j'ai mis en œuvre mes compétences pour créer ListnBuddy.",
+        // icon: 'tabler:template',
       },
       {
-        title: 'Blog',
+        title: 'Engagement envers les Utilisateurs',
         description:
-          'Nullam efficitur volutpat sem sed fringilla. Suspendisse et enim eu orci volutpat laoreet ac vitae libero.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Business',
-        description:
-          'Morbi et elit finibus, facilisis justo ut, pharetra ipsum. Donec efficitur, ipsum quis congue luctus, mauris magna.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Branding',
-        description:
-          'Suspendisse vitae nisi eget tortor luctus maximus sed non lectus. Cras malesuada pretium placerat. Nullam venenatis dolor a ante rhoncus.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Medical',
-        description:
-          'Vestibulum malesuada lacus id nibh posuere feugiat. Nam volutpat nulla a felis ultrices, id suscipit mauris congue. In hac habitasse platea dictumst.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Fashion Design',
-        description:
-          'Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus.',
-        icon: 'tabler:template',
+          'Notre engagement envers nos utilisateurs est de fournir une application conviviale et intuitive, qui facilite la collaboration et améliore la manière dont les familles font leurs achats.',
+        // icon: 'tabler:template',
       },
     ]}
     image={{
-      src: '~/assets/images/colors.jpg',
+      src: 'https://images.unsplash.com/photo-1572721968930-b96258f64801?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80',
       alt: 'Colorful Image',
     }}
   />
@@ -120,103 +105,83 @@ const metadata = {
   <!-- Steps2 Widget ****************** -->
 
   <Steps2
-    title="Our values"
-    subtitle="Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus. Nulla facilisi. Vestibulum malesuada lacus."
-    items={[
-      {
-        title: 'Customer-centric approach',
-        description:
-          'Donec id nibh neque. Quisque et fermentum tortor. Fusce vitae dolor a mauris dignissim commodo. Ut eleifend luctus condimentum.',
-      },
-      {
-        title: 'Constant Improvement',
-        description:
-          'Phasellus laoreet fermentum venenatis. Vivamus dapibus pulvinar arcu eget mattis. Fusce eget mauris leo.',
-      },
-      {
-        title: 'Ethical Practices',
-        description:
-          'Vestibulum imperdiet libero et lectus molestie, et maximus augue porta. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
-      },
-    ]}
-  />
-
-  <!-- Steps2 Widget ****************** -->
-
-  <Steps2
-    title="Achievements"
-    subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla, sed porttitor est nibh at nulla."
-    isReversed={true}
+    title="Notre Mission"
+    subtitle="Engagés à simplifier vos courses et à améliorer votre expérience d'achat."
     callToAction={{
-      text: 'See more',
-      href: '/',
+      text: 'Utiliser ListnBuddy',
+      href: 'https://app.listnbuddy.com/',
     }}
     items={[
       {
-        title: 'Global reach',
-        description: 'Nam malesuada urna in enim imperdiet tincidunt. Phasellus non tincidunt nisi, at elementum mi.',
-        icon: 'tabler:globe',
+        title: 'Compréhension des Défis',
+        description:
+          'Nous comprenons les défis que posent la coordination des listes de courses et les multiples besoins de chaque membre de la famille.',
       },
       {
-        title: 'Positive customer feedback and reviews',
+        title: 'La Plateforme Solution',
         description:
-          'Cras semper nulla leo, eget laoreet erat cursus sed. Praesent faucibus massa in purus iaculis dictum.',
-        icon: 'tabler:message-star',
+          'ListnBuddy vise à rendre les courses plus agréables et plus efficaces en offrant une plateforme où vous pouvez créer, partager et gérer vos listes de courses en toute simplicité.',
       },
       {
-        title: 'Awards and recognition as industry experts',
+        title: 'Au-Delà des Familles',
         description:
-          'Phasellus lacinia cursus velit, eu malesuada magna pretium eu. Etiam aliquet tellus purus, blandit lobortis ex rhoncus vitae.',
-        icon: 'tabler:award',
+          "Notre application est également idéale pour les professionnels, qu'il s'agisse de restaurants, d'entreprises de construction ou d'autres secteurs, qui souhaitent gérer leurs achats de manière efficace. Elle convient aussi parfaitement aux amis, aux étudiants et aux colocataires qui veulent planifier leurs achats ensemble, que ce soit pour une fête ou pour le quotidien.",
       },
     ]}
   />
 
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="Our locations"
-    tagline="Find us"
-    columns={4}
-    items={[
-      {
-        title: 'EE.UU',
-        description: '1234 Lorem Ipsum St, 12345, Miami',
-      },
-      {
-        title: 'Spain',
-        description: '5678 Lorem Ipsum St, 56789, Madrid',
-      },
-      {
-        title: 'Australia',
-        description: '9012 Lorem Ipsum St, 90123, Sydney',
-      },
-      {
-        title: 'Brazil',
-        description: '3456 Lorem Ipsum St, 34567, São Paulo',
-      },
-    ]}
-  />
-
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="Technical Support"
-    tagline="Contact us"
+  <Features3
+    title="Notre Équipe"
+    subtitle="Nous sommes une petite équipe familiale, passionnée par la création d'une application qui simplifie les courses et améliore l'expérience d'achat."
     columns={2}
+    isBeforeContent={true}
     items={[
       {
-        title: 'Chat with us',
+        title: 'Les Membres Clés',
         description:
-          'Integer luctus laoreet libero, auctor varius purus rutrum sit amet. Ut nec molestie nisi, quis eleifend mi.',
-        icon: 'tabler:messages',
+          'ListnBuddy est dirigé par moi-même, Sylvain Rivière, en tant que codeur, designer et aussi un peu de marketing (rires). Ma femme et ma fille jouent un rôle essentiel en tant que testeurs.',
+        icon: 'tabler:template',
       },
       {
-        title: 'Call us',
+        title: "L'Amélioration Continue",
         description:
-          'Mauris faucibus finibus orci, in posuere elit viverra non. In hac habitasse platea dictumst. Cras lobortis metus a hendrerit congue.',
-        icon: 'tabler:headset',
+          'Notre famille, qui existe depuis 15 ans, est également le moteur qui nous pousse à améliorer constamment ListnBuddy.',
+        icon: 'tabler:template',
       },
     ]}
   />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    callToAction={{
+      text: 'Explorez nos avantages',
+      href: 'https://app.listnbuddy.com',
+      icon: 'tabler:download',
+    }}
+  >
+    <Fragment slot="title">Explorez nos fonctionnalités,</Fragment>
+
+    <Fragment slot="subtitle">
+      Découvrez comment ListnBuddy simplifie vos courses et optimise votre organisation. <br
+        class="hidden md:inline"
+      />Découvrez une nouvelle manière de gérer vos listes dès maintenant ! 😊
+    </Fragment>
+  </CallToAction>
+
+  <!-- Stats Widget ****************** -->
+
+  <!-- <Stats
+    title="Statistics about us"
+    stats={[
+      { title: 'Offices', amount: '4' },
+      { title: 'Employees', amount: '248' },
+      { title: 'Templates', amount: '12' },
+      { title: 'Awards', amount: '24' },
+    ]}
+  /> -->
+
+  <!-- Features3 Widget ************** -->
+
+  <!-- Steps2 Widget ****************** -->
 </Layout>
