@@ -4,7 +4,7 @@ import { Form } from '~/types';
 const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } = Astro.props as Form;
 ---
 
-<form name="contact_listnbuddy" method="POST" data-netlify="true">
+<form name="contact_listnbuddy" method="POST" data-netlify="true" netlify-honeypot="bot-field">
   {
     inputs &&
       inputs.map(
@@ -45,6 +45,8 @@ const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } 
       </div>
     )
   }
+
+  <input class="hidden" name="bot-field" />
 
   {
     disclaimer && (
