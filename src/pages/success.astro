@@ -1,0 +1,16 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Votre message est bien envoyé',
+};
+---
+
+<Layout metadata={metadata}>
+  <div class="mt-3 text-center">
+    <p class="text-sm text-gray-600 dark:text-gray-400">
+      Nous avons bien reçu votre message. Revenir à la page d'<a class="underline" href="/">accueil</a>
+    </p>
+  </div>
+  <div class="mt-8"></div>
+</Layout>
