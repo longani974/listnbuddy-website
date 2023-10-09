@@ -95,7 +95,7 @@ const load = async function (): Promise<Array<Post>> {
 
   const results = (await Promise.all(normalizedPosts))
     .sort((a, b) => b.publishDate.valueOf() - a.publishDate.valueOf())
-    .filter((post) => !post.draft);
+    // .filter((post) => !post.draft); // the draft filter doesn't let us see the post in dev mode
 
   return results;
 };
